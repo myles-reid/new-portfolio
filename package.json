@@ -5,7 +5,7 @@
   "scripts": {
     "start": "lite-server"
   },
-  "keywords": ["Portfoilio", "CSS", "JavaScript", "HTML", "Development"],
+  "keywords": ["Portfolio", "CSS", "JavaScript", "HTML", "Development"],
   "author": "Myles Reid",
   "license": "ISC",
   "description": "Personal Portfolio",
