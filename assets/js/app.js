@@ -5,6 +5,10 @@ import * as utils from './utils.js';
 const phrase = utils.select('.phrase');
 
 
+/*
+Rotating Text on the Hero Banner
+*/
+
 let swapablePhrase = phrase.textContent;
 const rotatingPhrases = [
   'a developer.', 'enthusiastic.', 'Myles Reid.', 'a student.'
