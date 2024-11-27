@@ -139,6 +139,10 @@ a {
 animation: swipein-left 0.75s ease-in-out 0s 1 normal forwards;
 }
 
+@keyframes rotation {
+  0% { --gradient-angle: 0deg; }
+  100% { --gradient-angle: 360deg; }
+}
 
 @keyframes rotatein {
 	0% {
@@ -152,6 +156,27 @@ animation: swipein-left 0.75s ease-in-out 0s 1 normal forwards;
 		transform: rotate(6deg) scale(1);
 		transform-origin: 50% 0;
 	}
+}
+
+@keyframes rotate {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 50px, 0);
+  }
+  
+  25%, 32% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    opacity: 0;
+    transform: translate3d(0, -50px, 0);
+  }
+  
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes fadein {

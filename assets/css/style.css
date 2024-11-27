@@ -17,16 +17,6 @@ body {
   animation: rotation 30s linear infinite;
 }
 
-@property --gradient-angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
-}
-
-@keyframes rotation {
-  0% { --gradient-angle: 0deg; }
-  100% { --gradient-angle: 360deg; }
-}
 
 /* ------------------------------------------------ */
 /* ------------      Header          -------------- */
@@ -44,8 +34,7 @@ header {
 nav {
   width:325px;
   
-
-  a{
+  a {
     font-size: 18px;
     padding: 8px 15px;
     border-radius: 25px;
@@ -59,7 +48,13 @@ nav {
 
 .header-wrapper {
   line-height: 50px;
-  justify-content: flex-end;
+  justify-content: space-between;
+}
+
+.icon {
+  height: 30px;
+  width: 30px;
+  align-self: center;
 }
 
 
@@ -223,38 +218,6 @@ nav {
   animation: rotate 6s infinite 5s;
 }
 
-@keyframes rotate {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, 50px, 0);
-  }
-  
-  25%, 32% {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-
-  50% {
-    opacity: 0;
-    transform: translate3d(0, -50px, 0);
-  }
-  
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes rotate-last {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, 50px, 0);
-  }
-  
-  50%, 100% {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
 
 /* ------------------------------------------------ */
 /* ------------      Projects        -------------- */

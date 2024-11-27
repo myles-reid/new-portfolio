@@ -8,9 +8,15 @@
   --app-color-dark-orange: #ff6f3c;
   --app-color-light-orange: #ff9a3c;
   --app-color-yellow: #ffc93c;
-  
+
   --app-border-radius: 6px;
   --app-box-shadow: 0px 0px 4px rgb(0 0 0 / 10%);
 
   --app-dark-gradient: linear-gradient(#1a1d28, #1e1a28, #251a28, #2a2437)
+}
+
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
 }
