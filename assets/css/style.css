@@ -272,6 +272,7 @@ nav {
   top: -2rem;
   rotate: 5deg;
   text-shadow: -1px -1px 1px #000;
+  font-size: 60px;
 }
 
 .examples {
@@ -286,6 +287,12 @@ nav {
   backdrop-filter: saturate(180%) blur(20px);
   border-radius: var(--app-border-radius);
   box-shadow: 1px 1px 1px #000;
+  transition: all 0.25s ease-in-out
+}
+
+.project:hover {
+  transform: scale(1.02);
+  outline: none;
 }
 
 .project > div {
