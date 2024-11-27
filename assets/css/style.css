@@ -9,3 +9,81 @@ html {
 body {
   background-color: var(--app-color-light-bg);
 }
+header {
+  height: 50px;
+  color: #fff;
+
+  ul {
+    width: 250px;
+  }
+}
+
+nav {
+  width:325px;
+  
+
+  a{
+    font-size: 18px;
+    padding: 8px 15px;
+    border-radius: 25px;
+    background-color: rgb(0 0 0 / 30%);
+    color: #fff;
+  }
+
+  a:hover {
+    background-color: #e03e6f
+  }
+
+  /* Light/darkmode Buttons */
+  .button {
+    height: 35px;
+    width: 35px;
+    border-radius: 50px;
+    margin-left: 5px;
+    padding-bottom: 4px;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    line-height: 35px;
+    background-color: black;
+    cursor: pointer;
+    padding-top: 4px;
+
+  }
+}
+
+.button-fixed {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: black;
+  z-index: 100;
+  cursor: pointer;
+  
+  .fa-solid {
+    position: relative;
+    font-size: 20px;
+    color: white;
+  }
+}
+
+.button-fixed-fixed {
+  inset: auto 20px 20px auto;
+  transition: all 0.15s ease-out;
+}
+
+.button-sticky-bottom {
+  inset: auto 20px 90px auto;
+  transition: all 0.25s;
+}
+
+.header-wrapper {
+  line-height: 50px;
+}
+
+.icon {
+  height: 30px;
+  width: 30px;
+  align-self: center;
+}
