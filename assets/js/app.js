@@ -3,6 +3,11 @@
 import * as utils from './utils.js';
 
 const phrase = utils.select('.phrase');
+const projects = utils.selectAll('.project');
+const hyper = projects[0];
+const uni = projects[1];
+const tip = projects[2];
+
 
 
 /*
@@ -38,3 +43,54 @@ utils.listen('load', window, () => {
   rotatePhrase()
   textTypingEffect(phrase, swapablePhrase);
 });
+
+/*
+Animations on scroll
+*/
+
+const scrollOffSet = 200;
+
+const elementInView = (element, offset = 0) => {
+  const elementTop = element.getBoundingClientRect().top;
+
+  return (
+    elementTop <=
+    ((window.innerHeight || document.documentElement.clientHeight) - offset)
+  );
+};
+
+function addAnimateScrollElement(element, animation){
+  if (!element.dataset.animated){
+    utils.removeClass(element, 'hidden');
+    utils.addClass(element, animation);
+    element.dataset.animated = 'true';
+  }
+}
+
+function removeAnimateScrollElement(element, animation){
+  if (element.dataset.animated) {
+    utils.removeClass(element, animation);
+    utils.addClass(element, 'hidden');
+    delete element.dataset.animated;
+  }
+}
+
+
+const handleScrollAnimation = (elements, animation, delays) => {
+  elements.forEach((element, index) => {
+    setTimeout(() => {
+      if (elementInView(element, scrollOffSet)) {
+        addAnimateScrollElement(element, animation);
+      } else {
+        removeAnimateScrollElement(element, animation)
+      }     
+    }, delays[index]);
+  });
+}
+
+
+utils.listen('scroll', window, () => {
+  const elements = [hyper, uni, tip];
+  const delays = [0, 500, 1000];
+  handleScrollAnimation(elements, 'slide-in-fwd-tl', delays);
+})
