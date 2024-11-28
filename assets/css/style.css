@@ -156,39 +156,45 @@ nav {
 /* ------------------------------------------------ */
 /* ------------      About           -------------- */
 /* ------------------------------------------------ */
-
 .about-me, .projects h3 {
   text-transform: uppercase;
   font-family: verdana;
   font-size: 45px;
   font-weight: 700;
+  width: 50svw;
   color: var(--app-color-light-orange);
   justify-self: center;
   position: relative;
   top: 75px;
+  display: grid;
 }
 
 .about-me h3 {
   rotate: -5deg;
   text-shadow: 1px 1px 1px #fff;
+  justify-self: center;
 }
 
 .bio {
   color: #fff;
   width: 50svw;
   height: 100svh;
-  font-size: 20px;
+  font-size: 18px;
   align-self: center;
   display: grid;
-  justify-content: space-around;
+}
+
+.bio p {
+  padding: 5px;
+  text-indent: 10%;
 }
 
 .previous-exp {
   position: relative;
   display: grid;
   overflow: hidden;
-  height: 8rem;
-  width: 32rem;
+  height: 5rem;
+  width: 100%;
   justify-self: center;
 }
 
@@ -200,6 +206,7 @@ nav {
   transition: all 1s ease-in-out;
   place-self: center;
   text-align: center;
+  width: 100%;
 }
 
 .slide:nth-of-type(1){
@@ -222,9 +229,8 @@ nav {
 /* ------------------------------------------------ */
 /* ------------      Projects        -------------- */
 /* ------------------------------------------------ */
-
 .projects {
-  height: 100svh;
+  height: 120svh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -236,14 +242,18 @@ nav {
   rotate: 5deg;
   text-shadow: -1px -1px 1px #000;
   font-size: 60px;
+  text-align: center;
 }
 
 .examples {
+  flex-wrap: wrap;
+  gap: 5px;
   justify-content: space-evenly;
+  width: 100%;
 }
 
 .project {
-  width: calc(33.333333333% - 30px);
+  width: calc(33.333333333% - 20px);
   height: 250px;
   padding: 10px;
   background: rgb(0 0 0 / 10%);
@@ -252,6 +262,7 @@ nav {
   box-shadow: 1px 1px 1px #000;
   transition: all 0.25s ease-in-out
 }
+
 
 .project:hover {
   transform: scale(1.02);
@@ -326,3 +337,101 @@ footer {
     filter: contrast(50%);
   }
 }
+
+@media screen and (max-width: 900px){
+
+  .section-wrapper {
+    height: 130svh;
+  }
+  
+  .section-wrapper > div {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .bio {
+    min-width: 650px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  .about-me {
+    top: 40px;
+  }
+
+  .about-me img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 650px){
+  .banner-text {
+    width: 30rem;
+    height: 20rem;
+  }
+
+  .banner-title {
+    font-size: 30px;
+  }
+
+  .banner-blurb {
+    font-size: 20px;
+  }
+
+  .intouch-button {
+    padding: 8px 15px;
+    font-size: 15px;
+  }
+
+  .about-me {
+    font-size: 35px;
+  }
+
+  .bio {
+    font-size: 16px;
+    min-width: 500px;
+  }
+
+  .projects h3 {
+    font-size: 50px;
+  }
+  .hyper-typer, .uni-website {
+    width: calc(50% - 10px);
+  }
+
+  .tip-calc {
+    width: 50%
+  }
+
+  .totop {
+    font-size: 18px;
+  }
+
+  .icons {
+    font-size: 25px;
+  }
+
+  .copyright {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 500px){
+ 
+  .bio {
+    min-width: 300px;
+    margin-bottom: 50px;
+  }
+
+  .projects {
+    height: 200svh;
+  }
+
+  .project {
+    width: 100%;
+    height: fit-content;
+  }
+}
+
