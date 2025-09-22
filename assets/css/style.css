@@ -147,7 +147,7 @@ nav {
 .section-wrapper {
   background-color:var(--app-color-blue);
   margin-top: -0.5px;
-  height: 120svh;
+  height: auto;
   display: flex;
   justify-content: space-evenly;
   clip-path: polygon(100% 100%, 80% 98%, 0% 100%, 0% -0.02%, 100% -0.02%);
@@ -175,54 +175,23 @@ nav {
   justify-self: center;
 }
 
+.section-wrapper > .container {
+ height: auto;
+}
+
 .bio {
   color: #fff;
   width: 50svw;
-  height: 100svh;
+  height: auto;
   font-size: 18px;
   align-self: center;
   display: grid;
+  margin: 50px 0;
 }
 
 .bio p {
   padding: 5px;
   text-indent: 10%;
-}
-
-.previous-exp {
-  position: relative;
-  display: grid;
-  overflow: hidden;
-  height: 5rem;
-  width: 100%;
-  justify-self: center;
-}
-
-
-.slide {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  transition: all 1s ease-in-out;
-  place-self: center;
-  text-align: center;
-  width: 100%;
-}
-
-.slide:nth-of-type(1){
-  animation: rotate 6s infinite 0.5s;
-}
-
-.slide:nth-of-type(2){
-  animation: rotate 6s infinite 2s;
-}
-
-.slide:nth-of-type(3) {
-  animation: rotate 6s infinite 3.5s;
-}
-
-.slide:nth-of-type(4) {
-  animation: rotate 6s infinite 5s;
 }
 
 
@@ -282,6 +251,17 @@ nav {
   color: var(--app-color-yellow);
   font-size: 25px;
   text-shadow: 1px 0.5px 1px #000;
+}
+
+.project img {
+  height: 180px;
+  width: auto;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  object-position: top;
+
+  border-radius: var(--app-border-radius);
+  box-shadow: 1px 1px 1px #000;
 }
 
 /* ------------------------------------------------ */

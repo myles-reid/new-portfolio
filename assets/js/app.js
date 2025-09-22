@@ -16,7 +16,7 @@ Rotating Text on the Hero Banner
 
 let swapablePhrase = phrase.textContent;
 const rotatingPhrases = [
-  'a developer.', 'enthusiastic.', 'Myles Reid.', 'a student.'
+  'a developer.', 'enthusiastic.', 'Myles Reid.', 'a freelancer.'
 ];
 
 function textTypingEffect(element, text, i = 0) {
